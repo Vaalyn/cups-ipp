@@ -623,6 +623,7 @@ class JobManager extends ManagerAbstract
 
         if ($part['type'] == Job::CONTENT_FILE) {
             $content .= $part['binary'];
+                        $content .= $data;
         } else {
             $content .= chr(0x16); // datahead
             $content .= $part['text'];
